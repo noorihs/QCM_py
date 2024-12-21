@@ -1,0 +1,125 @@
+{
+    "questions": [
+      {
+        "category": "Python",
+        "question": "What is the correct file extension for Python files?",
+        "options": [".py", ".python", ".pyt"],
+        "correct": 0
+      },
+      {
+        "category": "Python",
+        "question": "Which data type is used to store text in Python?",
+        "options": ["int", "str", "bool"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which function is used to output text to the screen in Python?",
+        "options": ["input()", "print()", "output()"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["def", "func", "function"],
+        "correct": 0
+      },
+      {
+        "category": "Python",
+        "question": "What is the output of the expression `3 + 2 * 2` in Python?",
+        "options": ["10", "7", "9"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What is the correct way to create a list in Python?",
+        "options": ["[1, 2, 3]", "{1, 2, 3}", "(1, 2, 3)"],
+        "correct": 0
+      },
+      {
+        "category": "Python",
+        "question": "How do you add an element to a list in Python?",
+        "options": ["add()", "append()", "insert()"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What is the result of `len([10, 20, 30])`?",
+        "options": ["2", "3", "4"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What is the output of `type(5.0)`?",
+        "options": ["int", "float", "str"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which of the following is a Python keyword?",
+        "options": ["define", "if", "loop"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "How do you start a comment in Python?",
+        "options": ["//", "#", "/*"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which module is used to generate random numbers in Python?",
+        "options": ["os", "random", "math"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What does the `open()` function do in Python?",
+        "options": ["Opens a file", "Creates a directory", "Executes a script"],
+        "correct": 0
+      },
+      {
+        "category": "Python",
+        "question": "Which Python data structure is immutable?",
+        "options": ["List", "Tuple", "Dictionary"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What is the result of `5 // 2` in Python?",
+        "options": ["2.5", "2", "3"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which statement is used to handle exceptions in Python?",
+        "options": ["try", "except", "Both"],
+        "correct": 2
+      },
+      {
+        "category": "Python",
+        "question": "What does the `len()` function return?",
+        "options": ["The type of a value", "The number of items in an object", "The memory size of an object"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "What is the output of `bool([])` in Python?",
+        "options": ["True", "False", "Error"],
+        "correct": 1
+      },
+      {
+        "category": "Python",
+        "question": "Which of the following methods is used to remove whitespace from the beginning and end of a string?",
+        "options": ["strip()", "trim()", "clean()"],
+        "correct": 0
+      },
+      {
+        "category": "Python",
+        "question": "Which operator is used for exponentiation in Python?",
+        "options": ["^", "**", "%"],
+        "correct": 1
+      }
+    ]
+  }
+s  

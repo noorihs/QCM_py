@@ -1,0 +1,17 @@
+{
+    "users": [
+      {
+        "username": "admin",
+        "role": "admin",
+        "password": "$2b$12$XyVjQnBrmYfg9KnxK3LJWeqH5NN.K./0EuUyTOeVxJ8CmS4KYy1aO",
+        "mcq_history": []
+      },
+      {
+        "username": "user1",
+        "role": "student",
+        "password": "$2b$12$Vz3vCXcLsRJ2ycmgGHuAeOymR/zvCdW2GZPI9x02kFuDmrw.AQomq",
+        "mcq_history": []
+      }
+    ]
+  }
+  

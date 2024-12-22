@@ -120,6 +120,15 @@
         "options": ["^", "**", "%"],
         "correct": 1
       },
+
+
+
+
+
+
+
+
+      
       {
         "category": "Networking",
         "question": "What does IP stand for in networking?",
@@ -239,7 +248,136 @@
         "question": "Which of the following is a type of wireless network?",
         "options": ["Wi-Fi", "Ethernet", "Fiber Optic", "DSL"],
         "ccorrect": 0
+      },
+
+
+
+
+
+
+
+      {
+        "category": "Algorithms",
+        "question": "What is the time complexity of the binary search algorithm?",
+        "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
+        "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Bubble Sort"],
+        "correct": 3
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which data structure is used in Depth-First Search (DFS)?",
+        "options": ["Queue", "Stack", "Heap", "Hash Table"],
+        "correct": 1
+      },
+      {
+      
+        "category": "Algorithms",
+        "question": "What is the space complexity of Merge Sort?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm is used to find the shortest path in a weighted graph?",
+        "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Depth-First Search"],
+        "correct": 0
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is the purpose of a hashing function in a hash table?",
+        "options": ["To sort data", "To compress data", "To map keys to indices", "To encrypt data"],
+        "correct": 2
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is the worst-case time complexity of Quick Sort?",
+        "options": ["O(log n)", "O(n)", "O(n log n)", "O(n^2)"],
+        "correct": 3
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm is used to detect cycles in a graph?",
+        "options": ["Kruskal's Algorithm", "Tarjan's Algorithm", "Prim's Algorithm", "Dijkstra's Algorithm"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "What does a greedy algorithm do?",
+        "options": ["Solves problems by dynamic programming", "Makes the locally optimal choice at each step", "Backtracks to explore all possibilities", "Divides the problem into smaller subproblems"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm is used for minimum spanning tree construction?",
+        "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which sorting algorithm is considered the most efficient for large datasets?",
+        "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        "correct": 2
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is the time complexity of Breadth-First Search (BFS) in a graph?",
+        "options": ["O(V + E)", "O(V^2)", "O(VE)", "O(log V)"],
+        "correct": 0
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm uses a divide-and-conquer approach?",
+        "options": ["Bubble Sort", "Quick Sort", "Kruskal's Algorithm", "Bellman-Ford Algorithm"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is a characteristic of dynamic programming?",
+        "options": ["It avoids recursion", "It uses memoization", "It is always faster than recursion", "It is a brute-force technique"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm is used to find the transitive closure of a graph?",
+        "options": ["Kruskal's Algorithm", "Floyd-Warshall Algorithm", "Prim's Algorithm", "Depth-First Search"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is the time complexity of the Floyd-Warshall algorithm?",
+        "options": ["O(V)", "O(V^2)", "O(V^3)", "O(V log V)"],
+        "correct": 2
+      },
+      {
+        "category": "Algorithms",
+        "question": "What does the Bellman-Ford algorithm handle that Dijkstra's algorithm cannot?",
+        "options": ["Negative weights", "Directed graphs", "Weighted graphs", "Unweighted graphs"],
+        "correct": 0
+      },
+      {
+        "category": "Algorithms",
+        "question": "What is the purpose of the KMP algorithm?",
+        "options": ["To search for substrings in a string", "To sort strings alphabetically", "To compress strings", "To encrypt strings"],
+        "correct": 0
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which of the following is a stable sorting algorithm?",
+        "options": ["Quick Sort", "Merge Sort", "Heap Sort", "Selection Sort"],
+        "correct": 1
+      },
+      {
+        "category": "Algorithms",
+        "question": "Which algorithm finds strongly connected components in a graph?",
+        "options": ["Tarjan's Algorithm", "Kruskal's Algorithm", "Dijkstra's Algorithm", "Prim's Algorithm"],
+        "correct": 0
       }
+  
 
     ]
   }

@@ -1,7 +1,7 @@
 import json
 
 
-
+#load_users
 def load_users(file="users.json"):
     try:
        with open(file, 'r', encoding='utf-8') as f:
@@ -11,3 +11,11 @@ def load_users(file="users.json"):
             return json.loads(content)
     except FileNotFoundError:
         return {"users": []}
+    
+    
+    
+    
+#save_users
+def save_users(users, file="users.json"):
+    with open(file, 'w', encoding='utf-8') as f:
+        json.dump(users, f, indent=4)

@@ -1,9 +1,13 @@
 import json
-import bcrypt
 
 
-password = "admin123"
-hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
 
-
-print(hashed_password.decode())
+def load_users(file="users.json"):
+    try:
+       
+       
+       
+       
+            return json.loads(content)
+    except FileNotFoundError:
+        return {"users": []}

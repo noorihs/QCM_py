@@ -1,383 +1,475 @@
 {
-    "questions": [
-      {
-        "category": "Python",
-        "question": "What is the correct file extension for Python files?",
-        "options": [".py", ".python", ".pyt"],
-        "correct": 0
-      },
-      {
-        "category": "Python",
-        "question": "Which data type is used to store text in Python?",
-        "options": ["int", "str", "bool"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which function is used to output text to the screen in Python?",
-        "options": ["input()", "print()", "output()"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which keyword is used to define a function in Python?",
-        "options": ["def", "func", "function"],
-        "correct": 0
-      },
-      {
-        "category": "Python",
-        "question": "What is the output of the expression `3 + 2 * 2` in Python?",
-        "options": ["10", "7", "9"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What is the correct way to create a list in Python?",
-        "options": ["[1, 2, 3]", "{1, 2, 3}", "(1, 2, 3)"],
-        "correct": 0
-      },
-      {
-        "category": "Python",
-        "question": "How do you add an element to a list in Python?",
-        "options": ["add()", "append()", "insert()"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What is the result of `len([10, 20, 30])`?",
-        "options": ["2", "3", "4"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What is the output of `type(5.0)`?",
-        "options": ["int", "float", "str"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which of the following is a Python keyword?",
-        "options": ["define", "if", "loop"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "How do you start a comment in Python?",
-        "options": ["//", "#", "/*"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which module is used to generate random numbers in Python?",
-        "options": ["os", "random", "math"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What does the `open()` function do in Python?",
-        "options": ["Opens a file", "Creates a directory", "Executes a script"],
-        "correct": 0
-      },
-      {
-        "category": "Python",
-        "question": "Which Python data structure is immutable?",
-        "options": ["List", "Tuple", "Dictionary"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What is the result of `5 // 2` in Python?",
-        "options": ["2.5", "2", "3"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which statement is used to handle exceptions in Python?",
-        "options": ["try", "except", "Both"],
-        "correct": 2
-      },
-      {
-        "category": "Python",
-        "question": "What does the `len()` function return?",
-        "options": ["The type of a value", "The number of items in an object", "The memory size of an object"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "What is the output of `bool([])` in Python?",
-        "options": ["True", "False", "Error"],
-        "correct": 1
-      },
-      {
-        "category": "Python",
-        "question": "Which of the following methods is used to remove whitespace from the beginning and end of a string?",
-        "options": ["strip()", "trim()", "clean()"],
-        "correct": 0
-      },
-      {
-        "category": "Python",
-        "question": "Which operator is used for exponentiation in Python?",
-        "options": ["^", "**", "%"],
-        "correct": 1
-      },
+  "questions": [
+    {
+      "category": "Python",
+      "question": "What is the correct file extension for Python files?",
+      "options": [".py", ".python", ".pyt"],
+      "correct": 0
+    },
+    {
+      "category": "Python",
+      "question": "Which data type is used to store text in Python?",
+      "options": ["int", "str", "bool"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which function is used to output text to the screen in Python?",
+      "options": ["input()", "print()", "output()"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which keyword is used to define a function in Python?",
+      "options": ["def", "func", "function"],
+      "correct": 0
+    },
+    {
+      "category": "Python",
+      "question": "What is the output of the expression `3 + 2 * 2` in Python?",
+      "options": ["10", "7", "9"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What is the correct way to create a list in Python?",
+      "options": ["[1, 2, 3]", "{1, 2, 3}", "(1, 2, 3)"],
+      "correct": 0
+    },
+    {
+      "category": "Python",
+      "question": "How do you add an element to a list in Python?",
+      "options": ["add()", "append()", "insert()"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What is the result of `len([10, 20, 30])`?",
+      "options": ["2", "3", "4"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What is the output of `type(5.0)`?",
+      "options": ["int", "float", "str"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which of the following is a Python keyword?",
+      "options": ["define", "if", "loop"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "How do you start a comment in Python?",
+      "options": ["//", "#", "/*"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which module is used to generate random numbers in Python?",
+      "options": ["os", "random", "math"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What does the `open()` function do in Python?",
+      "options": ["Opens a file", "Creates a directory", "Executes a script"],
+      "correct": 0
+    },
+    {
+      "category": "Python",
+      "question": "Which Python data structure is immutable?",
+      "options": ["List", "Tuple", "Dictionary"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What is the result of `5 // 2` in Python?",
+      "options": ["2.5", "2", "3"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which statement is used to handle exceptions in Python?",
+      "options": ["try", "except", "Both"],
+      "correct": 2
+    },
+    {
+      "category": "Python",
+      "question": "What does the `len()` function return?",
+      "options": [
+        "The type of a value",
+        "The number of items in an object",
+        "The memory size of an object"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "What is the output of `bool([])` in Python?",
+      "options": ["True", "False", "Error"],
+      "correct": 1
+    },
+    {
+      "category": "Python",
+      "question": "Which of the following methods is used to remove whitespace from the beginning and end of a string?",
+      "options": ["strip()", "trim()", "clean()"],
+      "correct": 0
+    },
+    {
+      "category": "Python",
+      "question": "Which operator is used for exponentiation in Python?",
+      "options": ["^", "**", "%"],
+      "correct": 1
+    },
 
+    {
+      "category": "Networking",
+      "question": "What does IP stand for in networking?",
+      "options": [
+        "Internet Protocol",
+        "Internal Protocol",
+        "Internet Port",
+        "Internal Port"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which protocol is used for secure communication over the internet?",
+      "options": ["HTTP", "HTTPS", "FTP", "TCP"],
+      "correct": 1
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is an IPv4 address?",
+      "options": ["192.168.0.1", "300.500.0.1", "FE80::1", "8.8.8.8"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What does DNS stand for?",
+      "options": [
+        "Domain Name System",
+        "Data Network Service",
+        "Direct Network Server",
+        "Domain Network Service"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What is the default port for HTTP?",
+      "options": ["80", "443", "21", "23"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which protocol is used for sending emails?",
+      "options": ["SMTP", "IMAP", "FTP", "HTTP"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which device connects multiple computers in a network?",
+      "options": ["Router", "Switch", "Hub", "Modem"],
+      "correct": 1
+    },
+    {
+      "category": "Networking",
+      "question": "What does DHCP stand for?",
+      "options": [
+        "Dynamic Host Configuration Protocol",
+        "Dynamic Host Communication Protocol",
+        "Domain Host Communication Protocol",
+        "Domain Host Configuration Protocol"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which protocol operates at the Transport layer?",
+      "options": ["IP", "TCP", "HTTP", "DNS"],
+      "correct": 1
+    },
+    {
+      "category": "Networking",
+      "question": "What is the purpose of a subnet mask?",
+      "options": [
+        "To identify the network portion of an IP address",
+        "To encrypt data",
+        "To manage DNS requests",
+        "To assign IP addresses"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is a private IP address?",
+      "options": ["192.168.1.1", "8.8.8.8", "172.16.0.1", "203.0.113.5"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What is the function of a router in a network?",
+      "options": [
+        "It connects different networks",
+        "It stores data",
+        "It manages DNS requests",
+        "It filters unwanted traffic"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is a class A IP address?",
+      "options": ["10.0.0.1", "172.16.0.1", "192.168.0.1", "224.0.0.1"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What is the primary function of the TCP protocol?",
+      "options": [
+        "Connectionless communication",
+        "Reliable, connection-oriented communication",
+        "Data encryption",
+        "Data compression"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Networking",
+      "question": "What does NAT stand for?",
+      "options": [
+        "Network Address Translation",
+        "Network Access Terminal",
+        "Name Address Translation",
+        "Node Address Translation"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is used to map domain names to IP addresses?",
+      "options": ["DNS", "DHCP", "ARP", "SNMP"],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What is the maximum length of an IPv6 address?",
+      "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
+      "correct": 2
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is a characteristic of a VPN?",
+      "options": [
+        "Encrypts traffic",
+        "Improves local network speed",
+        "Uses TCP/IP exclusively",
+        "Does not require authentication"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "What is an IP address used for?",
+      "options": [
+        "Identifying devices on a network",
+        "Encrypting data",
+        "Connecting devices to the internet",
+        "Routing data packets"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Networking",
+      "question": "Which of the following is a type of wireless network?",
+      "options": ["Wi-Fi", "Ethernet", "Fiber Optic", "DSL"],
+      "correct": 0
+    },
 
-
-
-
-
-
-
-      
-      {
-        "category": "Networking",
-        "question": "What does IP stand for in networking?",
-        "options": ["Internet Protocol", "Internal Protocol", "Internet Port", "Internal Port"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which protocol is used for secure communication over the internet?",
-        "options": ["HTTP", "HTTPS", "FTP", "TCP"],
-        "ccorrect": 1
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is an IPv4 address?",
-        "options": ["192.168.0.1", "300.500.0.1", "FE80::1", "8.8.8.8"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What does DNS stand for?",
-        "options": ["Domain Name System", "Data Network Service", "Direct Network Server", "Domain Network Service"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What is the default port for HTTP?",
-        "options": ["80", "443", "21", "23"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which protocol is used for sending emails?",
-        "options": ["SMTP", "IMAP", "FTP", "HTTP"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which device connects multiple computers in a network?",
-        "options": ["Router", "Switch", "Hub", "Modem"],
-        "ccorrect": 1
-      },
-      {
-        "category": "Networking",
-        "question": "What does DHCP stand for?",
-        "options": ["Dynamic Host Configuration Protocol", "Dynamic Host Communication Protocol", "Domain Host Communication Protocol", "Domain Host Configuration Protocol"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which protocol operates at the Transport layer?",
-        "options": ["IP", "TCP", "HTTP", "DNS"],
-        "ccorrect": 1
-      },
-      {
-        "category": "Networking",
-        "question": "What is the purpose of a subnet mask?",
-        "options": ["To identify the network portion of an IP address", "To encrypt data", "To manage DNS requests", "To assign IP addresses"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is a private IP address?",
-        "options": ["192.168.1.1", "8.8.8.8", "172.16.0.1", "203.0.113.5"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What is the function of a router in a network?",
-        "options": ["It connects different networks", "It stores data", "It manages DNS requests", "It filters unwanted traffic"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is a class A IP address?",
-        "options": ["10.0.0.1", "172.16.0.1", "192.168.0.1", "224.0.0.1"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What is the primary function of the TCP protocol?",
-        "options": ["Connectionless communication", "Reliable, connection-oriented communication", "Data encryption", "Data compression"],
-        "ccorrect": 1
-      },
-      {
-        "category": "Networking",
-        "question": "What does NAT stand for?",
-        "options": ["Network Address Translation", "Network Access Terminal", "Name Address Translation", "Node Address Translation"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is used to map domain names to IP addresses?",
-        "options": ["DNS", "DHCP", "ARP", "SNMP"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What is the maximum length of an IPv6 address?",
-        "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
-        "ccorrect": 2
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is a characteristic of a VPN?",
-        "options": ["Encrypts traffic", "Improves local network speed", "Uses TCP/IP exclusively", "Does not require authentication"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "What is an IP address used for?",
-        "options": ["Identifying devices on a network", "Encrypting data", "Connecting devices to the internet", "Routing data packets"],
-        "ccorrect": 0
-      },
-      {
-        "category": "Networking",
-        "question": "Which of the following is a type of wireless network?",
-        "options": ["Wi-Fi", "Ethernet", "Fiber Optic", "DSL"],
-        "ccorrect": 0
-      },
-
-
-
-
-
-
-
-      {
-        "category": "Algorithms",
-        "question": "What is the time complexity of the binary search algorithm?",
-        "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
-        "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Bubble Sort"],
-        "correct": 3
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which data structure is used in Depth-First Search (DFS)?",
-        "options": ["Queue", "Stack", "Heap", "Hash Table"],
-        "correct": 1
-      },
-      {
-      
-        "category": "Algorithms",
-        "question": "What is the space complexity of Merge Sort?",
-        "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm is used to find the shortest path in a weighted graph?",
-        "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Depth-First Search"],
-        "correct": 0
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is the purpose of a hashing function in a hash table?",
-        "options": ["To sort data", "To compress data", "To map keys to indices", "To encrypt data"],
-        "correct": 2
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is the worst-case time complexity of Quick Sort?",
-        "options": ["O(log n)", "O(n)", "O(n log n)", "O(n^2)"],
-        "correct": 3
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm is used to detect cycles in a graph?",
-        "options": ["Kruskal's Algorithm", "Tarjan's Algorithm", "Prim's Algorithm", "Dijkstra's Algorithm"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "What does a greedy algorithm do?",
-        "options": ["Solves problems by dynamic programming", "Makes the locally optimal choice at each step", "Backtracks to explore all possibilities", "Divides the problem into smaller subproblems"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm is used for minimum spanning tree construction?",
-        "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which sorting algorithm is considered the most efficient for large datasets?",
-        "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
-        "correct": 2
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is the time complexity of Breadth-First Search (BFS) in a graph?",
-        "options": ["O(V + E)", "O(V^2)", "O(VE)", "O(log V)"],
-        "correct": 0
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm uses a divide-and-conquer approach?",
-        "options": ["Bubble Sort", "Quick Sort", "Kruskal's Algorithm", "Bellman-Ford Algorithm"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is a characteristic of dynamic programming?",
-        "options": ["It avoids recursion", "It uses memoization", "It is always faster than recursion", "It is a brute-force technique"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm is used to find the transitive closure of a graph?",
-        "options": ["Kruskal's Algorithm", "Floyd-Warshall Algorithm", "Prim's Algorithm", "Depth-First Search"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is the time complexity of the Floyd-Warshall algorithm?",
-        "options": ["O(V)", "O(V^2)", "O(V^3)", "O(V log V)"],
-        "correct": 2
-      },
-      {
-        "category": "Algorithms",
-        "question": "What does the Bellman-Ford algorithm handle that Dijkstra's algorithm cannot?",
-        "options": ["Negative weights", "Directed graphs", "Weighted graphs", "Unweighted graphs"],
-        "correct": 0
-      },
-      {
-        "category": "Algorithms",
-        "question": "What is the purpose of the KMP algorithm?",
-        "options": ["To search for substrings in a string", "To sort strings alphabetically", "To compress strings", "To encrypt strings"],
-        "correct": 0
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which of the following is a stable sorting algorithm?",
-        "options": ["Quick Sort", "Merge Sort", "Heap Sort", "Selection Sort"],
-        "correct": 1
-      },
-      {
-        "category": "Algorithms",
-        "question": "Which algorithm finds strongly connected components in a graph?",
-        "options": ["Tarjan's Algorithm", "Kruskal's Algorithm", "Dijkstra's Algorithm", "Prim's Algorithm"],
-        "correct": 0
-      }
-  
-
-    ]
-  }
+    {
+      "category": "Algorithms",
+      "question": "What is the time complexity of the binary search algorithm?",
+      "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
+      "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Bubble Sort"],
+      "correct": 3
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which data structure is used in Depth-First Search (DFS)?",
+      "options": ["Queue", "Stack", "Heap", "Hash Table"],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the space complexity of Merge Sort?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm is used to find the shortest path in a weighted graph?",
+      "options": [
+        "Dijkstra's Algorithm",
+        "Kruskal's Algorithm",
+        "Prim's Algorithm",
+        "Depth-First Search"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the purpose of a hashing function in a hash table?",
+      "options": [
+        "To sort data",
+        "To compress data",
+        "To map keys to indices",
+        "To encrypt data"
+      ],
+      "correct": 2
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the worst-case time complexity of Quick Sort?",
+      "options": ["O(log n)", "O(n)", "O(n log n)", "O(n^2)"],
+      "correct": 3
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm is used to detect cycles in a graph?",
+      "options": [
+        "Kruskal's Algorithm",
+        "Tarjan's Algorithm",
+        "Prim's Algorithm",
+        "Dijkstra's Algorithm"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "What does a greedy algorithm do?",
+      "options": [
+        "Solves problems by dynamic programming",
+        "Makes the locally optimal choice at each step",
+        "Backtracks to explore all possibilities",
+        "Divides the problem into smaller subproblems"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm is used for minimum spanning tree construction?",
+      "options": [
+        "Dijkstra's Algorithm",
+        "Kruskal's Algorithm",
+        "Floyd-Warshall Algorithm",
+        "Bellman-Ford Algorithm"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which sorting algorithm is considered the most efficient for large datasets?",
+      "options": [
+        "Bubble Sort",
+        "Insertion Sort",
+        "Merge Sort",
+        "Selection Sort"
+      ],
+      "correct": 2
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the time complexity of Breadth-First Search (BFS) in a graph?",
+      "options": ["O(V + E)", "O(V^2)", "O(VE)", "O(log V)"],
+      "correct": 0
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm uses a divide-and-conquer approach?",
+      "options": [
+        "Bubble Sort",
+        "Quick Sort",
+        "Kruskal's Algorithm",
+        "Bellman-Ford Algorithm"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is a characteristic of dynamic programming?",
+      "options": [
+        "It avoids recursion",
+        "It uses memoization",
+        "It is always faster than recursion",
+        "It is a brute-force technique"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm is used to find the transitive closure of a graph?",
+      "options": [
+        "Kruskal's Algorithm",
+        "Floyd-Warshall Algorithm",
+        "Prim's Algorithm",
+        "Depth-First Search"
+      ],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the time complexity of the Floyd-Warshall algorithm?",
+      "options": ["O(V)", "O(V^2)", "O(V^3)", "O(V log V)"],
+      "correct": 2
+    },
+    {
+      "category": "Algorithms",
+      "question": "What does the Bellman-Ford algorithm handle that Dijkstra's algorithm cannot?",
+      "options": [
+        "Negative weights",
+        "Directed graphs",
+        "Weighted graphs",
+        "Unweighted graphs"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Algorithms",
+      "question": "What is the purpose of the KMP algorithm?",
+      "options": [
+        "To search for substrings in a string",
+        "To sort strings alphabetically",
+        "To compress strings",
+        "To encrypt strings"
+      ],
+      "correct": 0
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which of the following is a stable sorting algorithm?",
+      "options": ["Quick Sort", "Merge Sort", "Heap Sort", "Selection Sort"],
+      "correct": 1
+    },
+    {
+      "category": "Algorithms",
+      "question": "Which algorithm finds strongly connected components in a graph?",
+      "options": [
+        "Tarjan's Algorithm",
+        "Kruskal's Algorithm",
+        "Dijkstra's Algorithm",
+        "Prim's Algorithm"
+      ],
+      "correct": 0
+    }
+  ]
+}

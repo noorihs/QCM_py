@@ -41,14 +41,18 @@ def register_user(username, users):
 
 # Authenticate existing user
 
-
 def authenticate_user(username, users):
     user = find_user(username, users)
     if not user:
         print("User not found. Please register.")
         return None
     password = input("Enter your password: ").strip()
-
+    if password == user["password"]:
+        print(f"Welcome back, {username}!")
+        return user
+    else:
+        print("Incorrect password.")
+        return None
 
 def user_management():
     users = load_users()

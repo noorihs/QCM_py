@@ -55,3 +55,24 @@ def user_management():
     while True:
         username = input("Enter your username :").strip()
         user = find_user(username, users)
+        if user:
+            user = authenticate_user(username, users)
+            if user:
+                if "history" not in user:
+                    user["history"] = []
+
+                print(f"{username}'s History:")
+                if user["history"]:
+                    for entry in user["history"]:
+                        category = entry.get(
+                            "category", "N/A"
+                        )  # Default to 'N/A' if category is missing
+                        time_taken = entry.get(
+                            "time_taken", "N/A"
+                        )  # Default to 'N/A' if time_taken is missing
+                        print(
+                            f"- Date: {entry['date']}, Score: {entry['score']}, Category: {category}, Time Taken: {time_taken} seconds"
+                        )
+                else:
+                    print("No history available.")
+                return user, users

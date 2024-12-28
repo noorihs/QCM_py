@@ -46,9 +46,4 @@ def authenticate_user(username, users):
         print("User not found. Please register.")
         return None
     password = input("Enter your password: ").strip()
-    if password == user["password"]:
-        print(f"Welcome back, {username}!")
-        return user
-    else:
-        print("Incorrect password.")
-        return None
+    

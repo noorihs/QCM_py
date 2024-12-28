@@ -76,3 +76,14 @@ def user_management():
                 else:
                     print("No history available.")
                 return user, users
+        else:
+            print(f"Username '{username}' not found.")
+            choice = (
+                input("Do you want to register a new account? (yes/no): ")
+                .strip()
+                .lower()
+            )
+            if choice == "yes":
+                register_user(username, users)
+                user = find_user(username, users)
+                return user, users

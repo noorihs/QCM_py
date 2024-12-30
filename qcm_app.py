@@ -91,3 +91,17 @@ def user_management():
                 register_user(username, users)
                 user = find_user(username, users)
                 return user, users
+
+
+
+# Extract available categories
+def choose_category(questions_data):
+    categories = set(q["category"] for q in questions_data["questions"])
+    print("Available categories:")
+    for idx, category in enumerate(categories):
+        print(f"{idx + 1}. {category}")
+    while True:
+        try:
+            choice = int(input("Select a category by entering its number: "))
+            if 1 <= choice <= len(categories):
+                return list(categories)[choice - 1]

@@ -126,3 +126,11 @@ def display_questions(category, questions_data):
                 break
             print("Invalid input. Please select a valid option (e.g., a, b, c).")
     
+        if ord(answer) - 97 == question["correct"]:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Incorrect! The correct answer was: {question['options'][question['correct']]}")
+    print(f"\nYour final score: {score}/{len(category_questions)}")
+       
+    return score 

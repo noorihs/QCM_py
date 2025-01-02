@@ -105,3 +105,24 @@ def choose_category(questions_data):
             choice = int(input("Select a category by entering its number: "))
             if 1 <= choice <= len(categories):
                 return list(categories)[choice - 1]
+            
+
+
+def display_questions(category, questions_data):
+    print(f"\nYou selected the category: {category}")
+    category_questions = [q for q in questions_data["questions"] if q["category"] == category]
+
+    score = 0
+    
+    for idx, question in enumerate(category_questions, start=1):
+        
+        print(f"\nQuestion {idx}: {question['question']}")
+        for opt_idx, option in enumerate(question["options"]):
+            print(f"{chr(97 + opt_idx)}) {option}")
+        
+        while True:
+            answer = input("Your answer: ").lower()
+            if answer in [chr(97 + i) for i in range(len(question["options"]))]:
+                break
+            print("Invalid input. Please select a valid option (e.g., a, b, c).")
+    

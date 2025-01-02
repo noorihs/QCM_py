@@ -13,10 +13,16 @@ def load_users(file="users.json"):
         return {"users": []}
 
 
+
+
+
 # save_users
 def save_users(users, file="users.json"):
     with open(file, "w", encoding="utf-8") as f:
         json.dump(users, f, indent=4)
+
+
+
 
 
 # Find user
@@ -29,6 +35,9 @@ def find_user(username, users):
     return None
 
 
+
+
+
 # Register a new user
 
 
@@ -37,6 +46,9 @@ def register_user(username, users):
     users["users"].append({"username": username, "password": password, "history": []})
     save_users(users)
     print(f"Account created for {username}.")
+
+
+
 
 
 # Authenticate existing user
@@ -53,6 +65,11 @@ def authenticate_user(username, users):
     else:
         print("Incorrect password.")
         return None
+
+
+
+
+
 
 def user_management():
     users = load_users()
@@ -94,6 +111,12 @@ def user_management():
 
 
 
+
+
+
+
+
+
 ## Extract available categories
 def choose_category(questions_data):
     categories = set(q["category"] for q in questions_data["questions"])
@@ -110,6 +133,8 @@ def choose_category(questions_data):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+           
+           
             
 
 
@@ -139,3 +164,16 @@ def display_questions(category, questions_data):
     print(f"\nYour final score: {score}/{len(category_questions)}")
        
     return score 
+
+
+
+
+#load quest
+
+def load_questions(file="questions.json"):
+    try:
+        with open(file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Error: 'questions.json' file is missing or corrupted.")
+        exit(1)

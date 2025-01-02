@@ -177,3 +177,27 @@ def load_questions(file="questions.json"):
     except (FileNotFoundError, json.JSONDecodeError):
         print("Error: 'questions.json' file is missing or corrupted.")
         exit(1)
+
+
+
+
+
+# Main application flow
+def main():
+    print("Welcome to the Computer Science MCQ Application!")
+    
+    # Load questions and manage user
+    questions_data = load_questions()
+    user, users = user_management()
+    
+    # Select category
+    category = choose_category(questions_data)
+    
+
+
+
+
+
+
+if __name__ == "__main__":
+    main()

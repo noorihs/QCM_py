@@ -94,7 +94,7 @@ def user_management():
 
 
 
-# Extract available categories
+## Extract available categories
 def choose_category(questions_data):
     categories = set(q["category"] for q in questions_data["questions"])
     print("Available categories:")
@@ -105,6 +105,11 @@ def choose_category(questions_data):
             choice = int(input("Select a category by entering its number: "))
             if 1 <= choice <= len(categories):
                 return list(categories)[choice - 1]
+            else:
+                print("Invalid choice. Please enter a number corresponding to a category.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
             
 
 

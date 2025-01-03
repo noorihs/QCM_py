@@ -134,15 +134,26 @@ def choose_category(questions_data):
             print("Invalid input. Please enter a number.")
 
            
+           
+           
 # Convert seconds to a formatted string (minutes:seconds)
 def format_time(seconds):
     minutes = int(seconds) // 60
     seconds = int(seconds) % 60
     return f"{minutes:02}:{seconds:02}"
  
+ 
+ 
+ 
+ 
  # Round time to 2 decimal places
 def format_time_taken(seconds):
     return round(seconds, 2)  # Round time to two decimal places           
+
+
+
+
+
 
 
 def display_questions(category, questions_data):
@@ -175,6 +186,7 @@ def display_questions(category, questions_data):
 
 
 
+
 #load quest
 
 def load_questions(file="questions.json"):
@@ -189,6 +201,7 @@ def load_questions(file="questions.json"):
 
 
 
+
 # Main application flow
 def main():
     print("Welcome to the Computer Science MCQ Application!")
@@ -197,14 +210,23 @@ def main():
     questions_data = load_questions()
     user, users = user_management()
     
+    
     # Select category
     category = choose_category(questions_data)
     
-
-
-
-
-
+    
+    # Display questions and calculate score with timer
+    score, total_time_taken = display_questions(category, questions_data)
+    
+    # Save user history with category and time taken
+    user["history"].append({
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "score": score,
+        "category": category,
+        "time_taken": total_time_taken  # Store the time taken
+    })
+    save_users(users)
+    
 
 if __name__ == "__main__":
     main()

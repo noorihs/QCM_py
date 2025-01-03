@@ -139,7 +139,10 @@ def format_time(seconds):
     minutes = int(seconds) // 60
     seconds = int(seconds) % 60
     return f"{minutes:02}:{seconds:02}"
-            
+ 
+ # Round time to 2 decimal places
+def format_time_taken(seconds):
+    return round(seconds, 2)  # Round time to two decimal places           
 
 
 def display_questions(category, questions_data):

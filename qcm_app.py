@@ -134,7 +134,11 @@ def choose_category(questions_data):
             print("Invalid input. Please enter a number.")
 
            
-           
+# Convert seconds to a formatted string (minutes:seconds)
+def format_time(seconds):
+    minutes = int(seconds) // 60
+    seconds = int(seconds) % 60
+    return f"{minutes:02}:{seconds:02}"
             
 
 

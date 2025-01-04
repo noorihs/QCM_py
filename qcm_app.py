@@ -145,14 +145,23 @@ def format_time_taken(seconds):
     return round(seconds, 2)  # Round time to two decimal places           
 
 
+# Display questions and calculate score with timer
 def display_questions(category, questions_data):
     print(f"\nYou selected the category: {category}")
     category_questions = [q for q in questions_data["questions"] if q["category"] == category]
 
     score = 0
-    
+    start_time = time.time()  # Start the global timer for the questionnaire
+    time_limit = 300  # Time limit in seconds (5 minutes)
+
     for idx, question in enumerate(category_questions, start=1):
-        
+        # Check if the time limit is exceeded
+        elapsed_time = time.time() - start_time
+        time_remaining = time_limit - elapsed_time  # Calculate remaining time
+        if time_remaining <= 0:
+            print("\nTime is up! You have exceeded the time limit.")
+            break
+
         print(f"\nQuestion {idx}: {question['question']}")
         for opt_idx, option in enumerate(question["options"]):
             print(f"{chr(97 + opt_idx)}) {option}")
@@ -162,15 +171,21 @@ def display_questions(category, questions_data):
             if answer in [chr(97 + i) for i in range(len(question["options"]))]:
                 break
             print("Invalid input. Please select a valid option (e.g., a, b, c).")
-    
+        
+        # Display the remaining time for the user
+        print(f"Time remaining: {format_time(time_remaining)}")
+
         if ord(answer) - 97 == question["correct"]:
             print("Correct!")
             score += 1
         else:
             print(f"Incorrect! The correct answer was: {question['options'][question['correct']]}")
+
     print(f"\nYour final score: {score}/{len(category_questions)}")
-       
-    return score 
+    total_time_taken = time.time() - start_time  # Calculate the total time taken
+    total_time_taken_rounded = format_time_taken(total_time_taken)  # Round the time taken
+    print(f"Time taken: {format_time(total_time_taken_rounded)}")  # Display the total time taken
+    return score, total_time_taken_rounded  # Return both score and time_taken
 
 
 

@@ -204,7 +204,14 @@ def load_questions(file="questions.json"):
 
 # Main application flow
 def main():
-    print("Welcome to the Computer Science MCQ Application!")
+   
+    print(Fore.WHITE + "==============================================")
+    print(Fore.WHITE + Style.BRIGHT + "   Welcome to the Ultimate Computer Science   ")
+    print(Fore.WHITE + Style.BRIGHT + "            MCQ Challenge Application         ")
+    print(Fore.WHITE + "==============================================\n")
+    
+    print(Fore.WHITE + Style.BRIGHT + "Prepare yourself for a thrilling quiz experience!\n")
+    
     
     # Load questions and manage user
     questions_data = load_questions()
@@ -226,6 +233,10 @@ def main():
         "time_taken": total_time_taken  # Store the time taken
     })
     save_users(users)
+    
+    print(Fore.WHITE + "\nThank you for using the MCQ Application!")
+    print(Fore.WHITE + "==============================================\n")
+
     
 
 if __name__ == "__main__":

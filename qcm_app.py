@@ -164,15 +164,6 @@ def format_time_taken(seconds):
     return round(seconds, 2)  # Round time to two decimal places           
 
 
-<<<<<<< HEADstions and calculate score with timer
-=======
-
-# Display que
-
-
-
-
->>>>>>> e9dcb7db52baa0ab8de47ff621c34195ccd232f4
 def display_questions(category, questions_data):
     print(f"\nYou selected the category: {category}")
     category_questions = [q for q in questions_data["questions"] if q["category"] == category]

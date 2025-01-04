@@ -1,8 +1,4 @@
 import json
-<<<<<<< HEAD
-import time
-from datetime import datetime
-=======
 from datetime import datetime
 from colorama import Fore, Back, Style, init
 import time
@@ -10,7 +6,6 @@ import time
 # Initialize Colorama
 init(autoreset=True)
 
->>>>>>> e9dcb7db52baa0ab8de47ff621c34195ccd232f4
 
 
 # load_users
@@ -134,21 +129,22 @@ def user_management():
 
 
 
-## Extract available categories
+# Extract available categories
 def choose_category(questions_data):
     categories = set(q["category"] for q in questions_data["questions"])
-    print("Available categories:")
-    for idx, category in enumerate(categories):
-        print(f"{idx + 1}. {category}")
+    print(Fore.YELLOW + "\nAvailable categories:\n")
+    for idx, category in enumerate(categories, start=1):
+        print(Fore.CYAN + f"{idx}. {category}")
+    
     while True:
         try:
-            choice = int(input("Select a category by entering its number: "))
+            choice = int(input(Fore.YELLOW + "\nSelect a category by entering its number: "))
             if 1 <= choice <= len(categories):
                 return list(categories)[choice - 1]
             else:
-                print("Invalid choice. Please enter a number corresponding to a category.")
+                print(Fore.RED + "Invalid choice. Please enter a valid number.\n")
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print(Fore.RED + "Invalid input. Please enter a valid number.\n")
 
            
            

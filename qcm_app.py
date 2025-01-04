@@ -194,7 +194,7 @@ def load_questions(file="questions.json"):
         with open(file, 'r', encoding='utf-8') as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
-        print("Error: 'questions.json' file is missing or corrupted.")
+        print(Fore.RED + "Error: 'questions.json' file is missing or corrupted.")
         exit(1)
 
 

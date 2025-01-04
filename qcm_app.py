@@ -1,4 +1,11 @@
 import json
+from datetime import datetime
+from colorama import Fore, Back, Style, init
+import time
+
+# Initialize Colorama
+init(autoreset=True)
+
 
 
 # load_users
@@ -8,10 +15,15 @@ def load_users(file="users.json"):
             content = f.read().strip()
             if not content:
                 return {"users": []}
-            return json.loads(content)
+            
+            users = json.loads(content)
+            # Ensure each user has a 'history' key
+            for user in users["users"]:
+                if "history" not in user:
+                    user["history"] = []
+            return users
     except FileNotFoundError:
         return {"users": []}
-
 
 
 

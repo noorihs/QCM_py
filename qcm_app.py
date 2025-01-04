@@ -1,6 +1,16 @@
 import json
+<<<<<<< HEAD
 import time
 from datetime import datetime
+=======
+from datetime import datetime
+from colorama import Fore, Back, Style, init
+import time
+
+# Initialize Colorama
+init(autoreset=True)
+
+>>>>>>> e9dcb7db52baa0ab8de47ff621c34195ccd232f4
 
 
 # load_users
@@ -10,10 +20,15 @@ def load_users(file="users.json"):
             content = f.read().strip()
             if not content:
                 return {"users": []}
-            return json.loads(content)
+            
+            users = json.loads(content)
+            # Ensure each user has a 'history' key
+            for user in users["users"]:
+                if "history" not in user:
+                    user["history"] = []
+            return users
     except FileNotFoundError:
         return {"users": []}
-
 
 
 
@@ -136,18 +151,32 @@ def choose_category(questions_data):
             print("Invalid input. Please enter a number.")
 
            
+           
+           
 # Convert seconds to a formatted string (minutes:seconds)
 def format_time(seconds):
     minutes = int(seconds) // 60
     seconds = int(seconds) % 60
     return f"{minutes:02}:{seconds:02}"
  
+ 
+ 
+ 
+ 
  # Round time to 2 decimal places
 def format_time_taken(seconds):
     return round(seconds, 2)  # Round time to two decimal places           
 
 
-# Display questions and calculate score with timer
+<<<<<<< HEADstions and calculate score with timer
+=======
+
+# Display que
+
+
+
+
+>>>>>>> e9dcb7db52baa0ab8de47ff621c34195ccd232f4
 def display_questions(category, questions_data):
     print(f"\nYou selected the category: {category}")
     category_questions = [q for q in questions_data["questions"] if q["category"] == category]
@@ -190,6 +219,7 @@ def display_questions(category, questions_data):
     return score, total_time_taken_rounded  # Return both score and time_taken
 
 
+
 #load quest
 
 def load_questions(file="questions.json"):
@@ -197,8 +227,9 @@ def load_questions(file="questions.json"):
         with open(file, 'r', encoding='utf-8') as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
-        print("Error: 'questions.json' file is missing or corrupted.")
+        print(Fore.RED + "Error: 'questions.json' file is missing or corrupted.")
         exit(1)
+
 
 
 
@@ -206,20 +237,40 @@ def load_questions(file="questions.json"):
 
 # Main application flow
 def main():
-    print("Welcome to the Computer Science MCQ Application!")
+   
+    print(Fore.WHITE + "==============================================")
+    print(Fore.WHITE + Style.BRIGHT + "   Welcome to the Ultimate Computer Science   ")
+    print(Fore.WHITE + Style.BRIGHT + "            MCQ Challenge Application         ")
+    print(Fore.WHITE + "==============================================\n")
+    
+    print(Fore.WHITE + Style.BRIGHT + "Prepare yourself for a thrilling quiz experience!\n")
+    
     
     # Load questions and manage user
     questions_data = load_questions()
     user, users = user_management()
     
+    
     # Select category
     category = choose_category(questions_data)
     
+    
+    # Display questions and calculate score with timer
+    score, total_time_taken = display_questions(category, questions_data)
+    
+    # Save user history with category and time taken
+    user["history"].append({
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "score": score,
+        "category": category,
+        "time_taken": total_time_taken  # Store the time taken
+    })
+    save_users(users)
+    
+    print(Fore.WHITE + "\nThank you for using the MCQ Application!")
+    print(Fore.WHITE + "==============================================\n")
 
-
-
-
-
+    
 
 if __name__ == "__main__":
     main()

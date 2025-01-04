@@ -1,18 +1,25 @@
 {
-  "users": [
-      {
-          "username": "admin",
-          "role": "admin",
-          "password": "newplaintextpassword",
-          "mcq_history": [],
-          "history": []
-      },
-      {
-          "username": "user1",
-          "role": "student",
-          "password": "newplaintextpassword",
-          "mcq_history": [],
-          "history": []
-      }
+    "users": [
+        {
+            "username": "admin",
+            "role": "admin",
+            "password": "newplaintextpassword",
+            "mcq_history": [],
+            "history": []
+        },
+        {
+            "username": "user1",
+            "role": "student",
+            "password": "newplaintextpassword",
+            "mcq_history": [],
+            "history": [
+                {
+                    "date": "2025-01-04 23:32:02",
+                    "score": 10,
+                    "category": "Algorithms",
+                    "time_taken": 19.59
+                }
+            ]
+        }
     ]
 }

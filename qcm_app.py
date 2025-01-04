@@ -39,7 +39,6 @@ def save_users(users, file="users.json"):
 
 # Find user
 
-
 def find_user(username, users):
     for user in users["users"]:
         if user["username"] == username:
@@ -51,32 +50,34 @@ def find_user(username, users):
 
 
 # Register a new user
-
-
 def register_user(username, users):
-    password = input("Set your password: ").strip()
+    print(Fore.CYAN + "\nPlease set your password: ", end="")
+    password = input().strip()
     users["users"].append({"username": username, "password": password, "history": []})
     save_users(users)
-    print(f"Account created for {username}.")
+    print(Fore.GREEN + f"\nAccount successfully created for {username}!\n")
+
+
 
 
 
 
 
 # Authenticate existing user
-
 def authenticate_user(username, users):
     user = find_user(username, users)
     if not user:
-        print("User not found. Please register.")
+        print(Fore.RED + "User not found. Please register.\n")
         return None
-    password = input("Enter your password: ").strip()
+    print(Fore.CYAN + "Enter your password: ", end="")
+    password = input().strip()
     if password == user["password"]:
-        print(f"Welcome back, {username}!")
+        print(Fore.GREEN + f"\nWelcome back, {username}!\n")
         return user
     else:
-        print("Incorrect password.")
+        print(Fore.RED + "Incorrect password. Please try again.\n")
         return None
+
 
 
 
@@ -157,7 +158,7 @@ def format_time(seconds):
  
  
  
- 
+
  
  # Round time to 2 decimal places
 def format_time_taken(seconds):

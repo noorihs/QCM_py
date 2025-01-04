@@ -1,4 +1,6 @@
 import json
+import time
+from datetime import datetime
 
 
 # load_users
@@ -186,8 +188,6 @@ def display_questions(category, questions_data):
     total_time_taken_rounded = format_time_taken(total_time_taken)  # Round the time taken
     print(f"Time taken: {format_time(total_time_taken_rounded)}")  # Display the total time taken
     return score, total_time_taken_rounded  # Return both score and time_taken
-
-
 
 
 #load quest

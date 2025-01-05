@@ -7,10 +7,12 @@ import time
 init(autoreset=True)
 
 
+
+
 # load_users
 def load_users(file="users.json"):
     try:
-        with open(file, "r", encoding="utf-8") as f:
+        with open(file, 'r', encoding='utf-8') as f:
             content = f.read().strip()
             if not content:
                 return {"users": []}
@@ -25,10 +27,17 @@ def load_users(file="users.json"):
         return {"users": []}
 
 
+
+
+
+
 # save_users
 def save_users(users, file="users.json"):
-    with open(file, "w", encoding="utf-8") as f:
+    with open(file, 'w', encoding='utf-8') as f:
         json.dump(users, f, indent=4)
+
+
+
 
 
 # Find user
@@ -41,6 +50,9 @@ def find_user(username, users):
     return None
 
 
+
+
+
 # Register a new user
 def register_user(username, users):
     print(Fore.CYAN + "\nPlease set your password: ", end="")
@@ -48,6 +60,10 @@ def register_user(username, users):
     users["users"].append({"username": username, "password": password, "history": []})
     save_users(users)
     print(Fore.GREEN + f"\nAccount successfully created for {username}!\n")
+
+
+
+
 
 
 # Authenticate existing user
@@ -64,6 +80,9 @@ def authenticate_user(username, users):
     else:
         print(Fore.RED + "Incorrect password. Please try again.\n")
         return None
+
+
+
 
 
 def user_management():
@@ -108,6 +127,9 @@ def user_management():
                 return user, users
 
 
+
+
+
 # Extract available categories
 def choose_category(questions_data):
     categories = set(q["category"] for q in questions_data["questions"])
@@ -128,11 +150,16 @@ def choose_category(questions_data):
             print(Fore.RED + "Invalid input. Please enter a valid number.\n")
 
 
+
+
+
 # Convert seconds to a formatted string (minutes:seconds)
 def format_time(seconds):
     minutes = int(seconds) // 60
     seconds = int(seconds) % 60
     return f"{minutes:02}:{seconds:02}"
+
+
 
 
 # Round time to 2 decimal places
@@ -194,12 +221,17 @@ def display_questions(category, questions_data):
     return score, total_time_taken_rounded  # Return both score and time_taken
 
 
-# load quest
 
+
+
+
+
+
+# load quest
 
 def load_questions(file="questions.json"):
     try:
-        with open(file, "r", encoding="utf-8") as f:
+        with open(file, 'r', encoding='utf-8') as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         print(Fore.RED + "Error: 'questions.json' file is missing or corrupted.")
@@ -208,42 +240,34 @@ def load_questions(file="questions.json"):
 
 # Main application flow
 def main():
-
+    
     print(Fore.WHITE + "==============================================")
     print(Fore.WHITE + Style.BRIGHT + "   Welcome to the Ultimate Computer Science   ")
     print(Fore.WHITE + Style.BRIGHT + "            MCQ Challenge Application         ")
     print(Fore.WHITE + "==============================================\n")
-
-    print(
-        Fore.WHITE
-        + Style.BRIGHT
-        + "Prepare yourself for a thrilling quiz experience!\n"
-    )
-
+        
+    print(Fore.WHITE + Style.BRIGHT + "Prepare yourself for a thrilling quiz experience!\n")
+    
     # Load questions and manage user
     questions_data = load_questions()
     user, users = user_management()
-
+    
     # Select category
     category = choose_category(questions_data)
-
+    
     # Display questions and calculate score with timer
     score, total_time_taken = display_questions(category, questions_data)
-
-    # Save user history with category and time taken
-    user["history"].append(
-        {
-            "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "score": score,
-            "category": category,
-            "time_taken": total_time_taken,  # Store the time taken
-        }
-    )
+    
+    user["history"].append({
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "score": score,
+        "category": category,
+        "time_taken": total_time_taken  # Store the time taken
+    })
     save_users(users)
 
     print(Fore.WHITE + "\nThank you for using the MCQ Application!")
     print(Fore.WHITE + "==============================================\n")
-
 
 if __name__ == "__main__":
     main()

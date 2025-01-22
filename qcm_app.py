@@ -8,14 +8,15 @@ init(autoreset=True)
 
 
 
+
 # load_users
 def load_users(file="users.json"):
     try:
-        with open(file, "r", encoding="utf-8") as f:
+        with open(file, 'r', encoding='utf-8') as f:
             content = f.read().strip()
             if not content:
                 return {"users": []}
-            
+
             users = json.loads(content)
             # Ensure each user has a 'history' key
             for user in users["users"]:
@@ -28,9 +29,11 @@ def load_users(file="users.json"):
 
 
 
+
+
 # save_users
 def save_users(users, file="users.json"):
-    with open(file, "w", encoding="utf-8") as f:
+    with open(file, 'w', encoding='utf-8') as f:
         json.dump(users, f, indent=4)
 
 
@@ -38,6 +41,7 @@ def save_users(users, file="users.json"):
 
 
 # Find user
+
 
 def find_user(username, users):
     for user in users["users"]:
@@ -56,7 +60,6 @@ def register_user(username, users):
     users["users"].append({"username": username, "password": password, "history": []})
     save_users(users)
     print(Fore.GREEN + f"\nAccount successfully created for {username}!\n")
-
 
 
 
@@ -82,12 +85,11 @@ def authenticate_user(username, users):
 
 
 
-
-
 def user_management():
     users = load_users()
     while True:
-        username = input("Enter your username :").strip()
+        print(Fore.YELLOW + "\nPlease enter your username: ", end="")
+        username = input().strip()
         user = find_user(username, users)
         if user:
             user = authenticate_user(username, users)
@@ -95,7 +97,7 @@ def user_management():
                 if "history" not in user:
                     user["history"] = []
 
-                print(f"{username}'s History:")
+                print(Fore.MAGENTA + f"\n{username}'s History:")
                 if user["history"]:
                     for entry in user["history"]:
                         category = entry.get(
@@ -105,15 +107,17 @@ def user_management():
                             "time_taken", "N/A"
                         )  # Default to 'N/A' if time_taken is missing
                         print(
-                            f"- Date: {entry['date']}, Score: {entry['score']}, Category: {category}, Time Taken: {time_taken} seconds"
+                            Fore.WHITE
+                            + f"- Date: {entry['date']}, Score: {entry['score']}, Category: {category}, Time Taken: {time_taken} seconds"
                         )
                 else:
-                    print("No history available.")
+                    print(Fore.WHITE + "No history available.\n")
                 return user, users
         else:
-            print(f"Username '{username}' not found.")
+            print(Fore.RED + f"Username '{username}' not found.")
             choice = (
-                input("Do you want to register a new account? (yes/no): ")
+                Fore.YELLOW
+                + input("Do you want to register a new account? (yes/no): ")
                 .strip()
                 .lower()
             )
@@ -126,20 +130,18 @@ def user_management():
 
 
 
-
-
-
-
 # Extract available categories
 def choose_category(questions_data):
     categories = set(q["category"] for q in questions_data["questions"])
     print(Fore.YELLOW + "\nAvailable categories:\n")
     for idx, category in enumerate(categories, start=1):
         print(Fore.CYAN + f"{idx}. {category}")
-    
+
     while True:
         try:
-            choice = int(input(Fore.YELLOW + "\nSelect a category by entering its number: "))
+            choice = int(
+                input(Fore.YELLOW + "\nSelect a category by entering its number: ")
+            )
             if 1 <= choice <= len(categories):
                 return list(categories)[choice - 1]
             else:
@@ -147,27 +149,29 @@ def choose_category(questions_data):
         except ValueError:
             print(Fore.RED + "Invalid input. Please enter a valid number.\n")
 
-           
-           
-           
+
+
+
+
 # Convert seconds to a formatted string (minutes:seconds)
 def format_time(seconds):
     minutes = int(seconds) // 60
     seconds = int(seconds) % 60
     return f"{minutes:02}:{seconds:02}"
- 
- 
- 
 
- 
- # Round time to 2 decimal places
+
+
+
+# Round time to 2 decimal places
 def format_time_taken(seconds):
-    return round(seconds, 2)  # Round time to two decimal places           
+    return round(seconds, 2)  # Round time to two decimal places
 
 
 def display_questions(category, questions_data):
-    print(f"\nYou selected the category: {category}")
-    category_questions = [q for q in questions_data["questions"] if q["category"] == category]
+    print(Fore.CYAN + f"\nYou selected the category: {category}\n")
+    category_questions = [
+        q for q in questions_data["questions"] if q["category"] == category
+    ]
 
     score = 0
     start_time = time.time()  # Start the global timer for the questionnaire
@@ -181,34 +185,49 @@ def display_questions(category, questions_data):
             print("\nTime is up! You have exceeded the time limit.")
             break
 
-        print(f"\nQuestion {idx}: {question['question']}")
+        print(Fore.GREEN + f"\nQuestion {idx}: {question['question']}")
         for opt_idx, option in enumerate(question["options"]):
-            print(f"{chr(97 + opt_idx)}) {option}")
-        
+            print(Fore.WHITE + f"{chr(97 + opt_idx)}) {option}")
+
         while True:
-            answer = input("Your answer: ").lower()
+            answer = input(Fore.YELLOW + "Your answer: ").lower()
             if answer in [chr(97 + i) for i in range(len(question["options"]))]:
                 break
-            print("Invalid input. Please select a valid option (e.g., a, b, c).")
-        
+            print(
+                Fore.RED
+                + "Invalid input. Please select a valid option (e.g., a, b, c)."
+            )
+
         # Display the remaining time for the user
         print(f"Time remaining: {format_time(time_remaining)}")
 
         if ord(answer) - 97 == question["correct"]:
-            print("Correct!")
+            print(Fore.GREEN + "Correct! ✅\n")
             score += 1
         else:
-            print(f"Incorrect! The correct answer was: {question['options'][question['correct']]}")
+            print(
+                Fore.RED
+                + f"Incorrect! ❌ The correct answer was: {question['options'][question['correct']]}"
+            )
 
     print(f"\nYour final score: {score}/{len(category_questions)}")
     total_time_taken = time.time() - start_time  # Calculate the total time taken
-    total_time_taken_rounded = format_time_taken(total_time_taken)  # Round the time taken
-    print(f"Time taken: {format_time(total_time_taken_rounded)}")  # Display the total time taken
+    total_time_taken_rounded = format_time_taken(
+        total_time_taken
+    )  # Round the time taken
+    print(
+        f"Time taken: {format_time(total_time_taken_rounded)}"
+    )  # Display the total time taken
     return score, total_time_taken_rounded  # Return both score and time_taken
 
 
 
-#load quest
+
+
+
+
+
+# load quest
 
 def load_questions(file="questions.json"):
     try:
@@ -219,34 +238,26 @@ def load_questions(file="questions.json"):
         exit(1)
 
 
-
-
-
-
 # Main application flow
 def main():
-   
+    
     print(Fore.WHITE + "==============================================")
     print(Fore.WHITE + Style.BRIGHT + "   Welcome to the Ultimate Computer Science   ")
     print(Fore.WHITE + Style.BRIGHT + "            MCQ Challenge Application         ")
     print(Fore.WHITE + "==============================================\n")
-    
+        
     print(Fore.WHITE + Style.BRIGHT + "Prepare yourself for a thrilling quiz experience!\n")
-    
     
     # Load questions and manage user
     questions_data = load_questions()
     user, users = user_management()
     
-    
     # Select category
     category = choose_category(questions_data)
-    
     
     # Display questions and calculate score with timer
     score, total_time_taken = display_questions(category, questions_data)
     
-    # Save user history with category and time taken
     user["history"].append({
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "score": score,
@@ -254,11 +265,9 @@ def main():
         "time_taken": total_time_taken  # Store the time taken
     })
     save_users(users)
-    
+
     print(Fore.WHITE + "\nThank you for using the MCQ Application!")
     print(Fore.WHITE + "==============================================\n")
-
-    
 
 if __name__ == "__main__":
     main()

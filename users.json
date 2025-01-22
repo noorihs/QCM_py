@@ -1,8 +1,8 @@
 {
   "users": [
       {
-          "username": "admin",
-          "role": "admin",
+          "username": "user",
+          "role": "user",
           "password": "newplaintextpassword",
           "mcq_history": [],
           "history": []

@@ -1,18 +1,31 @@
 {
-  "users": [
-      {
-          "username": "admin",
-          "role": "admin",
-          "password": "newplaintextpassword",
-          "mcq_history": [],
-          "history": []
-      },
-      {
-          "username": "user1",
-          "role": "student",
-          "password": "newplaintextpassword",
-          "mcq_history": [],
-          "history": []
-      }
+    "users": [
+        {
+            "username": "admin",
+            "role": "admin",
+            "password": "newplaintextpassword",
+            "mcq_history": [],
+            "history": []
+        },
+        {
+            "username": "user1",
+            "role": "student",
+            "password": "newplaintextpassword",
+            "mcq_history": [],
+            "history": [
+                {
+                    "date": "2025-01-22 22:18:40",
+                    "score": 15,
+                    "category": "Networking",
+                    "time_taken": 9.52
+                },
+                {
+                    "date": "2025-01-22 22:20:59",
+                    "score": 5,
+                    "category": "Algorithms",
+                    "time_taken": 8.53
+                }
+            ]
+        }
     ]
 }

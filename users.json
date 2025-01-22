@@ -24,6 +24,18 @@
                     "score": 5,
                     "category": "Algorithms",
                     "time_taken": 8.53
+                },
+                {
+                    "date": "2025-01-22 23:25:18",
+                    "score": 4,
+                    "category": "Algorithms",
+                    "time_taken": 40.21
+                },
+                {
+                    "date": "2025-01-22 23:28:38",
+                    "score": 7,
+                    "category": "Python",
+                    "time_taken": 31.36
                 }
             ]
         },
@@ -31,6 +43,30 @@
             "username": "ihsene",
             "password": "ihsene",
             "history": []
+        },
+        {
+            "username": "alice",
+            "password": "alice",
+            "history": [
+                {
+                    "date": "2025-01-22 23:26:12",
+                    "score": 5,
+                    "category": "Python",
+                    "time_taken": 11.85
+                }
+            ]
+        },
+        {
+            "username": "bob",
+            "password": "bob",
+            "history": [
+                {
+                    "date": "2025-01-22 23:29:24",
+                    "score": 9,
+                    "category": "Networking",
+                    "time_taken": 20.91
+                }
+            ]
         }
     ]
 }
